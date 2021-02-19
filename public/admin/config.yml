@@ -27,4 +27,4 @@ collections:
       - { label: "url", name: "url", widget: "string" }
       - { label: "imageLg", name: "imageLg", widget: "image" }
       - { label: "imageSm", name: "imageSm", widget: "image" }
-      - { label: "text", name: "text", widget: "markdown" }
+      - { label: "body", name: "body", widget: "markdown" }
