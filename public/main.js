@@ -145,7 +145,7 @@ const getProducts = () => {
        
         post = {
           id: getTimeStemp(metadata),
-          header: metadata.header ? metadata.header : "No header given",
+          header: metadata.title ? metadata.title : "No header given",
           shortText: metadata.shortText ? metadata.shortText : "No shortText given",
           imageSm: metadata.imageSm,
           imageLg: metadata.imageLg,
