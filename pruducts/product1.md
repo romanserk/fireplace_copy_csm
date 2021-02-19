@@ -1,7 +1,7 @@
 ---
 header: Some product header
-author: Roman serk
 url: /itempage/1
+shortText: some short text
 imageLg: /images/logo192.png
 imageSm: /images/logo192.png
 ---
