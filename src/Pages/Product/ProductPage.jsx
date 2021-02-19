@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Markdown from "react-markdown";
 import "./ProductPage.scss";
 import { useLocation, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -7,17 +8,20 @@ import InfoStripe from "../../Components/InfoStripe/InfoStripe";
 import GalleryLower from "../../Components/Gallery/GalleryLower";
 
 import { productsList } from "../../JsonLists/itemsList";
+import productsListCSM from "../../products.json";
 
 const ProductPage = () => {
   const location = useLocation();
   const [currentProduct, setCurrentProduct] = useState();
   const [suggestionList, setSuggestionList] = useState([]);
   useEffect(() => {
-    const index = productsList.findIndex(
+    const index = productsListCSM.findIndex(
       (item) => `${item.id}` === location.pathname.split("/")[location.pathname.split("/").length - 1]
     );
-    setCurrentProduct(productsList[index]);
-    setSuggestionList(productsList.slice(Math.min(index, productsList.length - 2), (index + 3) % productsList.length));
+    setCurrentProduct(productsListCSM[index]);
+    setSuggestionList(
+      productsListCSM.slice(Math.min(index, productsListCSM.length - 2), (index + 3) % productsListCSM.length)
+    );
   }, [location.pathname]);
   return (
     <>
@@ -33,7 +37,7 @@ const ProductPage = () => {
                 </Link>
                 <h3 className="product-lower-header">{currentProduct.header}</h3>
                 <br />
-                {currentProduct.text}
+                <Markdown source={currentProduct.content} escapeHtml={false} />
                 <p>
                   <br />
                   <Link to="/contact" className="bold-link">

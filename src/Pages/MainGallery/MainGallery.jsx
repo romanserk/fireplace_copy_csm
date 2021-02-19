@@ -6,6 +6,8 @@ import fireplace1 from "../../images/fireplace1lg.jpg";
 
 import { productsList } from "../../JsonLists/itemsList";
 
+import  productsListCSM from "../../products.json";
+
 const mainHeader = "קונדימנטום קורוס בליקרה נונסט";
 const mainText = (
   <span>
@@ -33,7 +35,7 @@ const MainGallery = () => {
     }
   }, [location.pathname]);
 
-  return <Gallery mainHeader={mainHeader} mainText={mainText} mainImage={fireplace1} galleryItems={galleryItemsCate} />;
+  return <Gallery mainHeader={mainHeader} mainText={mainText} mainImage={fireplace1} galleryItems={productsListCSM} />;
 };
 
 export default MainGallery;

@@ -29,6 +29,25 @@ collections:
           widget: "list",
           field: { name: tag, label: Tag, widget: string },
         }
+      - {
+          label: "StyleList",
+          name: "styleList",
+          widget: "list",
+          field: { name: style, label: Style, widget: string },
+        }
+      - {
+          label: "TypeOptionsList",
+          name: "typeOptionsList",
+          widget: "list",
+          field: { name: type, label: Type, widget: string },
+        }
+      - {
+          label: "FeaturesList",
+          name: "featuresList",
+          widget: "list",
+          field: { name: feature, label: feature, widget: string },
+        }
+      - { label: "Categorie", name: "categorie", widget: "string" }
       - { label: "ShortText", name: "shortText", widget: "string" }
       - { label: "Url", name: "url", widget: "string" }
       - { label: "ImageLg", name: "imageLg", widget: "image" }
