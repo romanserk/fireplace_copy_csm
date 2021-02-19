@@ -17,12 +17,18 @@ collections:
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "products" # Used in routes, e.g., /admin/collections/products
-    label: "pruducts" # Used in the UI
-    folder: "pruducts" # The path to the folder where the documents are stored
+    label: "products" # Used in the UI
+    folder: "products" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "header", name: "header", widget: "string" }
+      - {
+          label: "tags",
+          name: "tags",
+          widget: "list",
+          field: { name: tag, label: Tag, widget: string },
+        }
       - { label: "shortText", name: "shortText", widget: "string" }
       - { label: "url", name: "url", widget: "string" }
       - { label: "imageLg", name: "imageLg", widget: "image" }
