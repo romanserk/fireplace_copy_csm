@@ -24,13 +24,13 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "header", widget: "string" }
       - {
-          label: "tags",
+          label: "Tags",
           name: "tags",
           widget: "list",
           field: { name: tag, label: Tag, widget: string },
         }
-      - { label: "shortText", name: "shortText", widget: "string" }
-      - { label: "url", name: "url", widget: "string" }
-      - { label: "imageLg", name: "imageLg", widget: "image" }
-      - { label: "imageSm", name: "imageSm", widget: "image" }
-      - { label: "body", name: "body", widget: "markdown" }
+      - { label: "ShortText", name: "shortText", widget: "string" }
+      - { label: "Url", name: "url", widget: "string" }
+      - { label: "ImageLg", name: "imageLg", widget: "image" }
+      - { label: "ImageSm", name: "imageSm", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
