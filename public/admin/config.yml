@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "public/images" 
-public_folder: "/images" 
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -12,8 +12,19 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "products" # Used in routes, e.g., /admin/collections/blog
+    label: "pruducts" # Used in the UI
+    folder: "pruducts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "header", name: "header", widget: "string" }
+      - { label: "shortText", name: "shortText", widget: "string" }
+      - { label: "url", name: "url", widget: "string" }
+      - { label: "imageLg", name: "imageLg", widget: "image" }
+      - { label: "imageSm", name: "imageSm", widget: "image" }
+      - { label: "text", name: "text", widget: "markdown" }
